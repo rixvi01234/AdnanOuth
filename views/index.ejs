@@ -1,0 +1,15 @@
+<div class="container">
+    <h2>Users</h2>
+    <ul id="userList"></ul>
+</div>
+
+<script>
+    async function loadUsers() {
+        const res = await fetch('/api/users');
+        const users = await res.json();
+        const list = document.getElementById('userList');
+        list.innerHTML = users.map(u => `<li>${u.name} (${u.email})</li>`).join('');
+    }
+
+    loadUsers();
+</script>
