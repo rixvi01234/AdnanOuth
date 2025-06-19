@@ -15,8 +15,9 @@ const app = express();
 // Google OAuth credentials
 const GOOGLE_CLIENT_ID = process.env.GOOGLE_CLIENT_ID;
 const GOOGLE_CLIENT_SECRET = process.env.GOOGLE_CLIENT_SECRET;
+const Mongo=process.env.Mongo
 
-mongoose.connect(process.env.Mongo)
+mongoose.connect(Mongo)
     .then(() => console.log('Connected to MongoDB'))
     .catch(err => console.error('Could not connect to MongoDB:', err));
 
