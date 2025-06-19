@@ -16,7 +16,7 @@ const app = express();
 const GOOGLE_CLIENT_ID = process.env.GOOGLE_CLIENT_ID;
 const GOOGLE_CLIENT_SECRET = process.env.GOOGLE_CLIENT_SECRET;
 
-mongoose.connect('mongodb://127.0.0.1:27017/userApp')
+mongoose.connect('mongodb+srv://Adnan:BailBailBail@cluster0.ozdsjpx.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
     .then(() => console.log('Connected to MongoDB'))
     .catch(err => console.error('Could not connect to MongoDB:', err));
 
